@@ -7,14 +7,20 @@ The base-func:
 You auth with your wallet, we fetch all the wallets you ever had interaction with (on EVM chains) and you can save them with names, notes and tags, basically like the contacts on your phone.
 That's an easy to implement base and offers a lot of room for creative expansion (sponsor challenges):
 
-- Fetch multi-blockchain data - use of Covalent api
+- DB structure - use Ceramic
+- Encrypt private DB - use [Lit](https://developer.litprotocol.com/)
+- Fetch multi-blockchain data - use of Covalent api -might not even be necessary if we use Moralis
 - Browse an address and show how many hops away it is (based on your contacts). - Implement TheGraph subgraph
 - Show assets of a Wallet - use TheGraph
-- Public tags (legit, fraud, weirdo, nft...) which you can add to an wallet you interacted with and can be retrieved by anyone. - use IPFS for db storage (DAGs?) - or use Ceramic
+- Public tags (legit, fraud, weirdo, nft...) which you can add to an wallet you interacted with and can be retrieved by anyone. - use IPFS for db storage (DAGs?) - Ceramic? or [Moralis](https://moralis.io/) with option to pin your private data to IPFS?
+- Moralis also for user [auth](https://docs.moralis.io/moralis-dapp/connect-the-sdk/connect-with-react)
 - Send files to your contacts - use IPFS lib2p
 - Plot your 'universe', close circle, income/outcome, target group if you have an app. - saw this in a SuperFluid demo
 - ML algs, like link prediction. But that goes to far for 3 weeks.
 - OnChain messenger - use XMTP
+- POAP for appUsers and POAP for XMTP msg waiting
+- TheGraph subgraph to query addresses aho use ourApp, public tags and addresses which have been tagged.
+
 
 We could use Remix (https://remix.run/blog/remix-stacks) which has a nice template for auth and database or stick to NextJs and use Supabase (I like that one better, we can do GraphQL queries here).
 
